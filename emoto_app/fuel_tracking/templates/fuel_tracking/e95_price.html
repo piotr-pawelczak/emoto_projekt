@@ -1,0 +1,23 @@
+{% extends 'fuel_tracking/base.html' %}
+
+{% block content %}
+<h1 style="margin-top: 20px;">E95 Price</h1>
+    <table class="table">
+        <thead style="background: #101011">
+            <tr>
+                <th>Place</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for place, price in data %}
+                <tr>
+                    <th> {{ place }}</th>
+                    <th> {{ price }} </th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock content %}

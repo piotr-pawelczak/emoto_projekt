@@ -1,0 +1,32 @@
+{% extends "forum/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1 style="margin-bottom: 30px;">Current Speed</h1>
+
+    {% if speed < 10 %}
+    <img src="{% static 'forum/images/speed_1.jpg' %}" style="width: 100%;">
+    {% elif speed < 20 %}
+    <img src="{% static 'forum/images/speed_2.jpg' %}" style="width: 100%;">
+    {% elif speed < 30 %}
+    <img src="{% static 'forum/images/speed_3.jpg' %}" style="width: 100%;">
+    {% elif speed < 40 %}
+    <img src="{% static 'forum/images/speed_4.jpg' %}" style="width: 100%;">
+    {% elif speed < 50 %}
+    <img src="{% static 'forum/images/speed_5.jpg' %}" style="width: 100%;">
+    {% elif speed < 60 %}
+    <img src="{% static 'forum/images/speed_6.jpg' %}" style="width: 100%;">
+    {% elif speed < 70 %}
+    <img src="{% static 'forum/images/speed_7.jpg' %}" style="width: 100%;">
+    {% elif speed < 80 %}
+    <img src="{% static 'forum/images/speed_8.jpg' %}" style="width: 100%;">
+    {% elif speed < 90 %}
+    <img src="{% static 'forum/images/speed_9.jpg' %}" style="width: 100%;">
+    {% else %}
+    <img src="{% static 'forum/images/speed_10.jpg' %}" style="width: 100%;">
+    {% endif %}
+
+    <h1 style="margin-top: 20px;"> Speed: {{ speed }} km/h </h1>
+
+
+{% endblock content %}

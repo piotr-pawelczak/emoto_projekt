@@ -1,0 +1,27 @@
+.achievements{
+    text-align: center;
+}
+
+.achievements img {
+    margin: 10px;
+}
+
+.achievement_type{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.achievement_type a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 15px;
+}
+
+.achievement_type a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #118cff;
+}

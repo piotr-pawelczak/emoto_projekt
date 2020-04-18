@@ -1,0 +1,34 @@
+{% extends  "achievements/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1> All achievements </h1>
+
+    <p>Achieved {{ achieved_list|length }}/{{ achievements|length }}</p>
+
+
+    <div class="container-fluid achievement_type">
+        <div class="row">
+            <div class="col-4 bg-primary"><a href="{% url 'achievements-home' %}">All</a></div>
+            <div class="col-4 bg-primary"><a href="{% url 'achievements-done' %}">Achieved</a></div>
+            <div class="col-4 bg-primary"><a href="{% url 'achievements-todo' %}">To do</a></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            {% for achievement in achievements %}
+                <div class="col-6 col-md-3">
+                    {% if achievement.achieved == True %}
+                        <img src="{% static achievement.img_achieved %}" style="width: 100%;">
+                    {% else %}
+                        <img src="{% static 'achievements/images/not_achieved.png' %}" style="width: 100%;">
+                    {% endif %}
+                    {{ achievement.name }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}
